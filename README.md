@@ -6,7 +6,7 @@
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-marvincoast-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marvincost/)
 [![GitHub](https://img.shields.io/badge/GitHub-marvincoast-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marvincoast)
-[![Location](https://img.shields.io/badge/Rio%20de%20Janeiro-RJ%2C%20Brasil-00B4D8?style=for-the-badge&logo=googlemaps&logoColor=white)](https://www.google.com/maps/place/Rio+de+Janeiro)
+[![Location](https://img.shields.io/badge/Todos%20os%20Santos-Rio%20de%20Janeiro%2C%20RJ-00B4D8?style=for-the-badge&logo=googlemaps&logoColor=white)](https://www.google.com/maps/place/Todos+os+Santos,+Rio+de+Janeiro)
 
 </div>
 
@@ -29,7 +29,7 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
   local    →  Rio de Janeiro, Todos os Santos — RJ 🇧🇷
   foco     →  SRE | FinOps | IaC | Segurança Cloud | Observabilidade
   inglês   →  Intermediário (B1)
-  buscando →  Posição Sênior em Cloud/SRE — Ambientes críticos e multicloud
+  área de interesse →  Cloud/SRE — Ambientes críticos e multicloud
 
 ┌──(marvin㉿cloud-ops)-[~]
 └─$ uptime
@@ -143,12 +143,16 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=marvincoast&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&cache_seconds=3600" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marvincoast&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=3600&langs_count=6" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=marvincoast&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&locale=pt_BR&cache_seconds=86400" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marvincoast&layout=compact&theme=tokyonight&hide_border=true&locale=pt_BR&langs_count=6&cache_seconds=86400" />
 
 <br/>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=marvincoast&theme=tokyonight&hide_border=true" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=marvincoast&theme=tokyonight&hide_border=true&locale=pt_BR&date_format=j%20M%5B%20Y%5D" />
+
+<br/>
+
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=marvincoast&theme=tokyonight" />
 
 </div>
 
