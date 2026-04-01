@@ -4,7 +4,7 @@
 
 <br/>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-marvincoast-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marvincost/)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-marvincost-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/marvincost/)
 [![GitHub](https://img.shields.io/badge/GitHub-marvincoast-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/marvincoast)
 [![Location](https://img.shields.io/badge/Todos%20os%20Santos-Rio%20de%20Janeiro%2C%20RJ-00B4D8?style=for-the-badge&logo=googlemaps&logoColor=white)](https://www.google.com/maps/place/Todos+os+Santos,+Rio+de+Janeiro)
 
