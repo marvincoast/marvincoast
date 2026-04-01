@@ -18,15 +18,24 @@ Sou **Cloud Architect & Analista de Infraestrutura** com mais de **10 anos de ex
 
 Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de soluções escaláveis com **Kubernetes, Terraform e pipelines CI/CD**. Cursando pós-graduação em **Arquitetura de Soluções** pela PUC-PR.
 
-```yaml
-perfil:
-  nome:       "Marvin Andersen dos Santos Costa"
-  cargo:      "Cloud Infrastructure Analyst & Solutions Architect"
-  empresa:    "Globo (Terceirizado)"
-  local:      "Rio de Janeiro, RJ"
-  foco:       ["SRE", "FinOps", "IaC", "Segurança Cloud", "Observabilidade"]
-  buscando:   "Posição Sênior em Cloud/SRE — Ambientes críticos e multicloud"
+```bash
+┌──(marvin㉿cloud-ops)-[~]
+└─$ whoami
+  Marvin Costa — Cloud Infrastructure Analyst & Solutions Architect
+
+┌──(marvin㉿cloud-ops)-[~]
+└─$ cat perfil.conf
+  empresa  →  Globo (Terceirizado)
+  local    →  Rio de Janeiro, RJ 🇧🇷
+  foco     →  SRE | FinOps | IaC | Segurança Cloud | Observabilidade
+  inglês   →  Intermediário (B1)
+  buscando →  Posição Sênior em Cloud/SRE — Ambientes críticos e multicloud
+
+┌──(marvin㉿cloud-ops)-[~]
+└─$ uptime
+  10+ anos em TI | Multicloud (AWS · Azure · GCP · OCI) | 5x Certificado
 ```
+
 
 ---
 
