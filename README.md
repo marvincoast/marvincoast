@@ -26,7 +26,7 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 ┌──(marvin㉿cloud-ops)-[~]
 └─$ cat perfil.conf
   empresa  →  Globo (Terceirizado)
-  local    →  Rio de Janeiro, RJ 🇧🇷
+  local    →  Rio de Janeiro, Todos os Santos — RJ 🇧🇷
   foco     →  SRE | FinOps | IaC | Segurança Cloud | Observabilidade
   inglês   →  Intermediário (B1)
   buscando →  Posição Sênior em Cloud/SRE — Ambientes críticos e multicloud
@@ -143,8 +143,12 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 
 <div align="center">
 
-<img height="160" src="https://github-readme-stats.vercel.app/api?username=marvincoast&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-<img height="160" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marvincoast&layout=compact&theme=tokyonight&hide_border=true" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=marvincoast&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&include_all_commits=true&cache_seconds=3600" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=marvincoast&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=3600&langs_count=6" />
+
+<br/>
+
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=marvincoast&theme=tokyonight&hide_border=true" />
 
 </div>
 
