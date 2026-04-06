@@ -62,6 +62,7 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 ![Azure](https://img.shields.io/badge/Azure-0078D4?style=for-the-badge&logo=microsoft-azure&logoColor=white)
 ![GCP](https://img.shields.io/badge/GCP-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white)
 ![OCI](https://img.shields.io/badge/Oracle_Cloud-F80000?style=for-the-badge&logo=oracle&logoColor=white)
+![VMware](https://img.shields.io/badge/VMware-607078?style=for-the-badge&logo=vmware&logoColor=white)
 
 ### ☸️ Containers & Orquestração
 ![Kubernetes](https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white)
@@ -71,6 +72,7 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 ### 🏗️ IaC & Automação
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=for-the-badge&logo=terraform&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
+![Bitbucket](https://img.shields.io/badge/Bitbucket-0052CC?style=for-the-badge&logo=bitbucket&logoColor=white)
 ![Shell Script](https://img.shields.io/badge/Shell_Script-121011?style=for-the-badge&logo=gnu-bash&logoColor=white)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5391FE?style=for-the-badge&logo=powershell&logoColor=white)
 
@@ -94,7 +96,6 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 ![Apache](https://img.shields.io/badge/Apache-D22128?style=for-the-badge&logo=apache&logoColor=white)
 ![IIS](https://img.shields.io/badge/IIS-0078D6?style=for-the-badge&logo=microsoft&logoColor=white)
 ![ServiceNow](https://img.shields.io/badge/ServiceNow-81B5A1?style=for-the-badge&logo=servicenow&logoColor=white)
-![Jira](https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white)
 
 ---
 
@@ -167,7 +168,7 @@ Minha atuação vai de fundação (Linux, redes, segurança) até arquitetura de
 
 <div align="center">
 
-*"Infraestrutura resiliente não é sorte — é engenharia."*
+
 
 [![Visitas](https://komarev.com/ghpvc/?username=marvincoast&color=3b82f6&style=for-the-badge&label=Visitas+ao+Perfil)](https://github.com/marvincoast)
 
