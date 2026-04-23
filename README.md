@@ -87,24 +87,13 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 
 ### IA, automação e produtividade de engenharia
 
-*Uso de LLM, agentes e automação de fluxos para acelerar IaC, revisão técnica e troubleshooting.*
-
-#### Modelos, APIs e engenharia de *prompt*
+*Uso de LLM, IA generativa, automação de fluxos e IDEs com IA integrada para acelerar IaC, revisão técnica e troubleshooting.*
 
 <div align="center">
 
 ![LLM e APIs](https://img.shields.io/badge/LLM_%C2%B7_APIs-111827?style=for-the-badge)
 ![Engenharia de prompt](https://img.shields.io/badge/Engenharia_de_prompt-0F172A?style=for-the-badge)
-![Claude Code](https://img.shields.io/badge/Claude_Code-CC785C?style=for-the-badge&logo=anthropic&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google_Gemini-4285F4?style=for-the-badge&logo=google&logoColor=white)
-
-</div>
-
-#### Agentes, IDE e automação de fluxos
-
-<div align="center">
-
-![Engenharia assistida](https://img.shields.io/badge/Engenharia_assistida-111827?style=for-the-badge)
+![IA generativa](https://img.shields.io/badge/IA_Generativa-6366F1?style=for-the-badge)
 ![Cursor](https://img.shields.io/badge/Cursor-14120F?style=for-the-badge&logo=cursor&logoColor=white)
 ![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white)
 ![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
