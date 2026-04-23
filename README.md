@@ -17,6 +17,7 @@
 
 <p>
   <a href="mailto:marvin.eth@hotmail.com"><img src="https://img.shields.io/badge/E--mail-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Enviar e-mail" /></a>
+  <a href="https://wa.me/5521966177241?text=Ol%C3%A1%2C%20Marvin!%20Encontrei%20seu%20perfil%20no%20GitHub%20e%20gostaria%20de%20conversar."><img src="https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Conversar no WhatsApp" /></a>
   <a href="https://www.google.com/maps/place/Rio+de+Janeiro"><img src="https://img.shields.io/badge/Rio%20de%20Janeiro-RJ-00B4D8?style=for-the-badge&logo=googlemaps&logoColor=white" alt="Localização" /></a>
 </p>
 
@@ -26,11 +27,7 @@
 
 ## Perfil profissional
 
-Cloud & Infrastructure Engineer com mais de 10 anos de experiência em TI, com forte direcionamento para SRE e DevOps. A trajetória inclui suporte, operações e infraestrutura, evoluindo para cloud, automação e confiabilidade.
-
-Não atuo há 10 anos como SRE: os 10+ anos representam experiência geral em TI, com consolidação recente em SRE/DevOps e arquitetura em nuvem. Atuo em ambientes críticos on-premises e multicloud (AWS, Azure, GCP, OCI), combinando automação, observabilidade e práticas de confiabilidade para elevar disponibilidade e reduzir tempo de recuperação.
-
-Também aplico engenharia assistida por agentes (Agentic Engineering) e IA generativa para acelerar entregas técnicas, gerar IaC, automatizar rotinas operacionais e apoiar o troubleshooting de ambientes complexos.
+Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e DevOps. Aprofundando a atuação em nuvem AWS, Kubernetes, Terraform, pipelines de CI/CD, serviços em Python e integração com API de LLM, resiliência de aplicação e front em JavaScript com foco em desempenho, além de orquestração de fluxos com n8n. Complementando a experiência com on-premises e multicloud (AWS, Azure, GCP e OCI) e com engenharia assistida por agentes e IA generativa para acelerar IaC, rotinas operacionais e o troubleshooting em ambientes complexos (Linux e Windows).
 
 ---
 
@@ -146,21 +143,13 @@ Também aplico engenharia assistida por agentes (Agentic Engineering) e IA gener
 
 ## Certificações
 
-*Cada item traz um distintivo visual ao lado; as credenciais oficiais também estão publicadas no Credly.*
+- AWS Certified Solutions Architect – Associate (SAA-C03)
+- AWS Certified Cloud Practitioner (CLF-C01)
+- Microsoft Azure Fundamentals (AZ-900)
+- Microsoft Security, Compliance, and Identity Fundamentals (SC-900)
+- Microsoft Azure AI Fundamentals (AI-900)
 
-| Distintivo | Certificação |
-|------------|-------------|
-| ![AWS SAA-C03](https://img.shields.io/badge/SAA--C03-Solutions%20Architect%20Associate-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900) | **AWS Certified Solutions Architect – Associate** — **SAA-C03** |
-| ![AWS CLF-C01](https://img.shields.io/badge/CLF--C01-Cloud%20Practitioner-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900) | **AWS Certified Cloud Practitioner** — **CLF-C01** |
-| ![Microsoft AZ-900](https://img.shields.io/badge/AZ--900-Azure%20Fundamentals-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white) | **Microsoft Azure Fundamentals** — **AZ-900** |
-| ![Microsoft SC-900](https://img.shields.io/badge/SC--900-Security%2C%20Identity%20%26%20Compliance-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white) | **Microsoft Security, Compliance, and Identity Fundamentals** — **SC-900** |
-| ![Microsoft AI-900](https://img.shields.io/badge/AI--900-Azure%20AI%20Fundamentals-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white) | **Microsoft Azure AI Fundamentals** — **AI-900** |
-
-<div align="center">
-  <a href="https://www.credly.com/users/marvin-costa.3c8c18f4/badges#credly">
-    <img src="https://img.shields.io/badge/Abrir%20distintivos%20oficiais%20no-Credly-4B28A1?style=for-the-badge&logo=credly&logoColor=white" alt="Credly — distintivos de Marvin Costa" />
-  </a>
-</div>
+**Credly:** [distintivos e validação](https://www.credly.com/users/marvin-costa.3c8c18f4/badges#credly)
 
 ---
 
@@ -184,9 +173,6 @@ Também aplico engenharia assistida por agentes (Agentic Engineering) e IA gener
   <a href="https://marvincoast.github.io/brasileirao-ultimate-manager/">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=brasileirao-ultimate-manager&theme=tokyonight&hide_border=true" />
   </a>
-  <a href="https://github.com/marvincoast/marvincoast">
-    <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=marvincoast&theme=tokyonight&hide_border=true" />
-  </a>
 </div>
 
 | Projeto | Resumo do projeto | Link |
@@ -194,7 +180,6 @@ Também aplico engenharia assistida por agentes (Agentic Engineering) e IA gener
 | SRE Dashboard Localiza | *Dashboard* de operação SRE com arquitetura AWS interativa, stack EKS/Karpenter e *pipeline* CI/CD para demonstrar confiabilidade, escalabilidade e observabilidade. | [Page](https://marvincoast.github.io/sre-dashboard-localiza/) |
 | PDF AI Service | Serviço de análise de PDF com Flask, extração de texto e LLM local via API *OpenAI-compatible*, incluindo *health checks* e *fallback* para aumentar resiliência. | [Repositório](https://github.com/marvincoast/pdf-service) |
 | Brasileirão Ultimate Manager | Simulador do Brasileirão em JavaScript puro com *Canvas* 2D, lógica de jogo em tempo real e foco em desempenho sem dependências externas. | [Page](https://marvincoast.github.io/brasileirao-ultimate-manager/) |
-| Perfil marvincoast | Repositório do perfil no GitHub, usado para apresentar posicionamento profissional, stack e projetos de forma objetiva. | [Repositório](https://github.com/marvincoast/marvincoast) |
 
 ---
 
@@ -212,6 +197,7 @@ Também aplico engenharia assistida por agentes (Agentic Engineering) e IA gener
 ## Contato
 
 - **E-mail:** [marvin.eth@hotmail.com](mailto:marvin.eth@hotmail.com)
+- **WhatsApp:** [+55 21 96617-7241](https://wa.me/5521966177241?text=Ol%C3%A1%2C%20Marvin!%20Encontrei%20seu%20perfil%20no%20GitHub%20e%20gostaria%20de%20conversar.) *(abre o app com uma mensagem inicial)*
 - **LinkedIn:** [linkedin.com/in/marvincost](https://www.linkedin.com/in/marvincost/)
 - **GitHub:** [github.com/marvincoast](https://github.com/marvincoast)
 - **Currículo (PDF):** [abrir no Google Drive](https://drive.google.com/file/d/1SUeuHNcQnlHaXqw2sqYR31v-UrLIvSz2/view?usp=sharing)
