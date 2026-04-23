@@ -146,11 +146,21 @@ Também aplico engenharia assistida por agentes (Agentic Engineering) e IA gener
 
 ## Certificações
 
-- AWS Certified Solutions Architect – Associate (**SAA-C03**)
-- AWS Certified Cloud Practitioner (**CLF-C01**)
-- Microsoft Azure Fundamentals (**AZ-900**)
-- Microsoft Security, Compliance, and Identity Fundamentals (**SC-900**)
-- Microsoft Azure AI Fundamentals (**AI-900**)
+*Cada item traz um distintivo visual ao lado; as credenciais oficiais também estão publicadas no Credly.*
+
+| Distintivo | Certificação |
+|------------|-------------|
+| ![AWS SAA-C03](https://img.shields.io/badge/SAA--C03-Solutions%20Architect%20Associate-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900) | **AWS Certified Solutions Architect – Associate** — **SAA-C03** |
+| ![AWS CLF-C01](https://img.shields.io/badge/CLF--C01-Cloud%20Practitioner-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900) | **AWS Certified Cloud Practitioner** — **CLF-C01** |
+| ![Microsoft AZ-900](https://img.shields.io/badge/AZ--900-Azure%20Fundamentals-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white) | **Microsoft Azure Fundamentals** — **AZ-900** |
+| ![Microsoft SC-900](https://img.shields.io/badge/SC--900-Security%2C%20Identity%20%26%20Compliance-5E5E5E?style=for-the-badge&logo=microsoft&logoColor=white) | **Microsoft Security, Compliance, and Identity Fundamentals** — **SC-900** |
+| ![Microsoft AI-900](https://img.shields.io/badge/AI--900-Azure%20AI%20Fundamentals-0078D4?style=for-the-badge&logo=microsoftazure&logoColor=white) | **Microsoft Azure AI Fundamentals** — **AI-900** |
+
+<div align="center">
+  <a href="https://www.credly.com/users/marvin-costa.3c8c18f4/badges#credly">
+    <img src="https://img.shields.io/badge/Abrir%20distintivos%20oficiais%20no-Credly-4B28A1?style=for-the-badge&logo=credly&logoColor=white" alt="Credly — distintivos de Marvin Costa" />
+  </a>
+</div>
 
 ---
 
