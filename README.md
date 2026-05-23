@@ -169,7 +169,7 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
   <a href="https://marvincoast.github.io/sre-dashboard-localiza/">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=sre-dashboard-localiza&theme=tokyonight&hide_border=true" />
   </a>
-  <a href="https://github.com/marvincoast/pdf-service">
+  <a href="https://marvincoast.github.io/pdf-service/index.html">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=pdf-service&theme=tokyonight&hide_border=true" />
   </a>
   <a href="https://marvincoast.github.io/brasileirao-ultimate-manager/">
@@ -180,7 +180,7 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 | Projeto | Resumo do projeto | Link |
 |---|---|---|
 | SRE Dashboard Localiza | *Dashboard* de operação SRE com arquitetura AWS interativa, stack EKS/Karpenter e *pipeline* CI/CD para demonstrar confiabilidade, escalabilidade e observabilidade. | [Page](https://marvincoast.github.io/sre-dashboard-localiza/) |
-| PDF AI Service | Serviço de análise de PDF com Flask, extração de texto e LLM local via API *OpenAI-compatible*, incluindo *health checks* e *fallback* para aumentar resiliência. | [Repositório](https://github.com/marvincoast/pdf-service) |
+| PDF AI Service | Serviço de análise de PDF com Flask, extração de texto e LLM local via API *OpenAI-compatible*, incluindo *health checks* e *fallback* para aumentar resiliência. | [Page](https://marvincoast.github.io/pdf-service/index.html) |
 | Brasileirão Ultimate Manager | Simulador do Brasileirão em JavaScript puro com *Canvas* 2D, lógica de jogo em tempo real e foco em desempenho sem dependências externas. | [Page](https://marvincoast.github.io/brasileirao-ultimate-manager/) |
 
 ---

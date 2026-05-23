@@ -1,0 +1,33 @@
+{
+  "title": "Curso Felix Empire Trading",
+  "subtitle": "Tape Reading e Análise de Fluxo do Dólar BRL",
+  "module": "Módulo",
+  "chapter": "Capítulo",
+  "lesson": "Aula",
+  "progress": "{{percent}}% concluído",
+  "startLesson": "Iniciar aula",
+  "continueLesson": "Continuar",
+  "lessonCompleted": "Aula concluída",
+  "moduleSimulation": "Simulado do módulo",
+  "startSimulation": "Iniciar simulado",
+  "prerequisites": "Complete as aulas anteriores para desbloquear.",
+  "simulationRequired": "Aprovação no simulado (≥75%) necessária para avançar.",
+  "tags": {
+    "absorcao_preco_fixo": "Absorção em preço fixo",
+    "absorcao_multiplos_niveis": "Absorção em múltiplos níveis",
+    "exaustao_compradora": "Exaustão compradora",
+    "exaustao_vendedora": "Exaustão vendedora",
+    "escora_player": "Escora de player",
+    "iceberg_lote_escondido": "Iceberg (lote escondido)",
+    "range_volatilidade_dia": "Range de volatilidade",
+    "zona_0_5": "Zona 0,5%",
+    "zona_1_0": "Zona 1,0%",
+    "zona_1_5": "Zona 1,5%",
+    "book_ofertas": "Book de ofertas",
+    "times_and_trades": "Times & Trades",
+    "macroeconomia_brasil": "Macro (Brasil)",
+    "macroeconomia_global": "Macro (Global)",
+    "gestao_risco": "Gestão de risco",
+    "psicologia_operacional": "Psicologia"
+  }
+}

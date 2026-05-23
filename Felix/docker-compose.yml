@@ -1,0 +1,294 @@
+# =============================================================================
+# Felix Empire Trading - Compose unico do projeto (dev e prod via profiles)
+# =============================================================================
+# Profiles:
+#   - dev   (default)    -> servicos da plataforma + traefik
+#   - llm                -> ollama local para RAG
+#   - cache              -> redis opcional
+#   - obs                -> prometheus + grafana (a habilitar na fase de obs)
+# =============================================================================
+
+name: felix
+
+x-service-defaults: &service-defaults
+  restart: unless-stopped
+  init: true
+  read_only: false
+  env_file:
+    - .env.local
+  security_opt:
+    - no-new-privileges:true
+  # Supabase CLI roda no host WSL (127.0.0.1:54321) — microserviços alcançam via host-gateway.
+  extra_hosts:
+    - "host.docker.internal:host-gateway"
+  logging:
+    driver: json-file
+    options:
+      max-size: "10m"
+      max-file: "5"
+
+x-node-build-args: &node-build-args
+  NODE_VERSION: "22"
+
+services:
+  # ---------------------------------------------------------------------------
+  # API Gateway - TLS, rate limit, roteamento /api/*
+  # ---------------------------------------------------------------------------
+  traefik:
+    <<: *service-defaults
+    # v3.6+ negocia API do Docker 29+ (v3.3 falha com "client version 1.24 is too old").
+    image: traefik:v3.6
+    container_name: felix-traefik
+    command:
+      - "--configFile=/etc/traefik/traefik.yml"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8081:8080" # dashboard (somente dev)
+    volumes:
+      - ./infra/traefik/traefik.yml:/etc/traefik/traefik.yml:ro
+      - ./infra/traefik/dynamic.yml:/etc/traefik/dynamic.yml:ro
+      - traefik_certs:/letsencrypt
+      # Necessário para o provider docker descobrir labels dos containers (read-only).
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    networks:
+      - felix-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8080/ping"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ---------------------------------------------------------------------------
+  # Frontend React
+  # ---------------------------------------------------------------------------
+  web:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.web
+      args:
+        <<: *node-build-args
+        # Vite injeta variáveis no bundle em build-time. Precisam estar como ARG.
+        VITE_API_BASE_URL: ${VITE_API_BASE_URL:-/api}
+        VITE_SUPABASE_URL: ${VITE_SUPABASE_URL}
+        VITE_SUPABASE_ANON_KEY: ${VITE_SUPABASE_ANON_KEY}
+    container_name: felix-web
+    ports:
+      # Acesso direto ao frontend se o Traefik estiver instável (dev).
+      - "3000:80"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.web.rule=Host(`localhost`) || Host(`127.0.0.1`)"
+      - "traefik.http.routers.web.entrypoints=web"
+      - "traefik.http.routers.web.priority=1"
+      - "traefik.http.routers.web.middlewares=secureheaders@file"
+      - "traefik.http.services.web.loadbalancer.server.port=80"
+    networks:
+      - felix-net
+    depends_on:
+      - traefik
+
+  # ---------------------------------------------------------------------------
+  # Microservicos NestJS (mesmo Dockerfile parametrizado por SERVICE_NAME)
+  # ---------------------------------------------------------------------------
+  course-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: course-service
+    container_name: felix-course
+    environment:
+      - SERVICE_NAME=course-service
+      - OTEL_SERVICE_NAME=course-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.course.rule=PathPrefix(`/api/courses`) || PathPrefix(`/api/progress`)"
+      - "traefik.http.routers.course.entrypoints=web"
+      - "traefik.http.routers.course.priority=100"
+      - "traefik.http.routers.course.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.course.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  assessment-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: assessment-service
+    container_name: felix-assessment
+    environment:
+      - SERVICE_NAME=assessment-service
+      - OTEL_SERVICE_NAME=assessment-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.assessment.rule=PathPrefix(`/api/assessments`) || PathPrefix(`/api/attempts`)"
+      - "traefik.http.routers.assessment.entrypoints=web"
+      - "traefik.http.routers.assessment.priority=100"
+      - "traefik.http.routers.assessment.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.assessment.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  certificate-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: certificate-service
+    container_name: felix-certificate
+    environment:
+      - SERVICE_NAME=certificate-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.certificate.rule=PathPrefix(`/api/certificates`) || PathPrefix(`/verify`)"
+      - "traefik.http.routers.certificate.entrypoints=web"
+      - "traefik.http.routers.certificate.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.certificate.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+
+  ranking-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: ranking-service
+    container_name: felix-ranking
+    environment:
+      - SERVICE_NAME=ranking-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.ranking.rule=PathPrefix(`/api/ranking`)"
+      - "traefik.http.routers.ranking.entrypoints=web"
+      - "traefik.http.routers.ranking.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.ranking.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+
+  rag-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: rag-service
+    container_name: felix-rag
+    environment:
+      - SERVICE_NAME=rag-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.rag.rule=PathPrefix(`/api/rag`)"
+      - "traefik.http.routers.rag.entrypoints=web"
+      - "traefik.http.routers.rag.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.rag.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+
+  notification-service:
+    <<: *service-defaults
+    build:
+      context: .
+      dockerfile: infra/docker/Dockerfile.service
+      args:
+        <<: *node-build-args
+        SERVICE_NAME: notification-service
+    container_name: felix-notification
+    environment:
+      - SERVICE_NAME=notification-service
+    labels:
+      - "traefik.enable=true"
+      - "traefik.docker.network=felix_felix-net"
+      - "traefik.http.routers.notification.rule=PathPrefix(`/api/notifications`)"
+      - "traefik.http.routers.notification.entrypoints=web"
+      - "traefik.http.routers.notification.middlewares=cors-api@file,ratelimit@file,secureheaders@file"
+      - "traefik.http.services.notification.loadbalancer.server.port=3000"
+    networks:
+      - felix-net
+      - supabase
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  # ---------------------------------------------------------------------------
+  # Ollama opcional (perfil llm) - LLM local para RAG em dev
+  # ---------------------------------------------------------------------------
+  ollama:
+    <<: *service-defaults
+    image: ollama/ollama:latest
+    container_name: felix-ollama
+    profiles: ["llm"]
+    expose:
+      - "11434"
+    volumes:
+      - ollama_data:/root/.ollama
+    networks:
+      - felix-net
+    healthcheck:
+      test: ["CMD", "ollama", "list"]
+      interval: 20s
+      timeout: 8s
+      retries: 10
+
+  # ---------------------------------------------------------------------------
+  # Redis opcional (perfil cache) - cache de leaderboard / RAG
+  # ---------------------------------------------------------------------------
+  redis:
+    <<: *service-defaults
+    image: redis:7-alpine
+    container_name: felix-redis
+    profiles: ["cache"]
+    command: ["redis-server", "--save", "60", "1", "--appendonly", "yes"]
+    expose:
+      - "6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - felix-net
+
+networks:
+  felix-net:
+    driver: bridge
+  # Rede criada pelo `npx supabase start` — microserviços alcançam o Kong sem host.docker.internal.
+  supabase:
+    external: true
+    name: supabase_network_felix-empire-trading
+
+volumes:
+  traefik_certs:
+  ollama_data:
+  redis_data:
