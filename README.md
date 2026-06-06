@@ -166,6 +166,9 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 ## Projetos no GitHub
 
 <div align="center">
+  <a href="https://marvincoast.github.io/coast-academy/">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=coast-academy&theme=tokyonight&hide_border=true" />
+  </a>
   <a href="https://marvincoast.github.io/sre-dashboard-localiza/">
     <img src="https://github-readme-stats.vercel.app/api/pin/?username=marvincoast&repo=sre-dashboard-localiza&theme=tokyonight&hide_border=true" />
   </a>
@@ -179,6 +182,7 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 
 | Projeto | Resumo do projeto | Link |
 |---|---|---|
+| Coast Academy | Plataforma de ensino interativa para *tape reading* e análise de fluxo de ordens do Dólar Futuro (B3), com simulados, certificados verificáveis e ranking. **IA:** tutor RAG (Ollama + pgvector), embeddings semânticos, citações e guardrails no `rag-service`. **Infra:** monorepo pnpm/Turborepo, 6 microserviços NestJS, Docker Compose, Traefik (proxy, TLS, rate limit), Supabase (Postgres 16, Auth, RLS), CI/CD com GitHub Actions e preview estático no GitHub Pages. | [Repo](https://github.com/marvincoast/coast-academy) · [Page](https://marvincoast.github.io/coast-academy/) |
 | SRE Dashboard Localiza | *Dashboard* de operação SRE com arquitetura AWS interativa, stack EKS/Karpenter e *pipeline* CI/CD para demonstrar confiabilidade, escalabilidade e observabilidade. | [Page](https://marvincoast.github.io/sre-dashboard-localiza/) |
 | PDF AI Service | Serviço de análise de PDF com Flask, extração de texto e LLM local via API *OpenAI-compatible*, incluindo *health checks* e *fallback* para aumentar resiliência. | [Page](https://marvincoast.github.io/pdf-service/index.html) |
 | Brasileirão Ultimate Manager | Simulador do Brasileirão em JavaScript puro com *Canvas* 2D, lógica de jogo em tempo real e foco em desempenho sem dependências externas. | [Page](https://marvincoast.github.io/brasileirao-ultimate-manager/) |
