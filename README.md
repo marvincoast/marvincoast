@@ -56,7 +56,7 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 ![IaC](https://img.shields.io/badge/Infrastructure_as_Code-7B42BC?style=for-the-badge)
 ![CI/CD](https://img.shields.io/badge/CI%2FCD-111827?style=for-the-badge&logo=githubactions&logoColor=white)
 ![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-2088FF?style=for-the-badge&logo=github-actions&logoColor=white)
-![Bitbucket](https://img.shields.io/badge/Bitbucket-0052CC?style=for-the-badge&logo=bitbucket&logoColor=white)
+
 
 </div>
 
@@ -97,7 +97,7 @@ Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e 
 ![IA generativa](https://img.shields.io/badge/IA_Generativa-6366F1?style=for-the-badge)
 ![Cursor](https://img.shields.io/badge/Cursor-14120F?style=for-the-badge&logo=cursor&logoColor=white)
 ![Google Antigravity](https://img.shields.io/badge/Google_Antigravity-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-EA4B71?style=for-the-badge&logo=n8n&logoColor=white)
+
 
 </div>
 
