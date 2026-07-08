@@ -27,7 +27,8 @@
 
 ## Perfil profissional
 
-Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e DevOps. Aprofundando a atuação em nuvem AWS, Kubernetes, Terraform, pipelines de CI/CD, serviços em Python e integração com API de LLM, resiliência de aplicação e front em JavaScript com foco em desempenho, além de orquestração de fluxos com n8n. Complementando a experiência com on-premises e multicloud (AWS, Azure, GCP e OCI) e com engenharia assistida por agentes e IA generativa para acelerar IaC, rotinas operacionais e o troubleshooting em ambientes complexos (Linux e Windows).
+Profissional de Cloud, Infraestrutura e IA, com forte direcionamento para SRE e DevOps. Aprofundando atuação em nuvem AWS, Kubernetes, Terraform , pipelines de CI/CD, serviços em Python e integração com API de LLM. Complementando a experiência com on-premises e multicloud (AWS, Azure, GCP e OCI) e com engenharia assistida por agentes e IA generativa para acelerar IaC, rotinas operacionais e troubleshooting em ambientes complexos Linux e Windows.
+
 
 ---
 
